@@ -1,0 +1,220 @@
+<div class="bg-white pt-3 shadow-lg max-w-3xl w-full h-5/6 flex flex-col">
+    <div class="bg-white p-3">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold text-gray-800">Add New Role</h2>
+            <button class="text-gray-600 hover:text-gray-800">✕</button>
+        </div>
+    </div>
+    <hr class="border-t border-gray-300" />
+    <div
+        class="bg-mainBg p-4 flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-200"
+    >
+        <form class="space-y-4">
+            <div class="flex justify-between space-x-4 mb-4">
+                <div class="flex-1">
+                    <label class="block text-sm font-medium">Role name</label
+                    ><input
+                        type="text"
+                        name="roleName"
+                        autocomplete="off"
+                        class="border border-gray-700 p-3 w-full focus:outline-none focus:ring-2 focus:ring-customGray"
+                        placeholder="Enter Role Name"
+                        required=""
+                        value=""
+                    />
+                </div>
+                <div class="flex-1">
+                    <label class="block text-sm font-medium">Description</label
+                    ><input
+                        type="text"
+                        name="description"
+                        autocomplete="off"
+                        class="border border-gray-700 p-3 w-full focus:outline-none focus:ring-2 focus:ring-customGray"
+                        placeholder="Enter Description"
+                        value=""
+                    />
+                </div>
+            </div>
+            <div class="mb-4">
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                    Set permissions
+                </h3>
+                <table
+                    class="min-w-full border-collapse bg-whiteGray shadow-sm text-sm"
+                >
+                    <thead>
+                        <tr class="bg-customGray text-white">
+                            <th class="border border-gray-700 p-3 text-left">
+                                NO
+                            </th>
+                            <th class="border border-gray-700 p-3 text-left">
+                                MENU NAME
+                            </th>
+                            <th class="border border-gray-700 p-3 text-left">
+                                VIEW
+                            </th>
+                            <th class="border border-gray-700 p-3 text-left">
+                                CREATE
+                            </th>
+                            <th class="border border-gray-700 p-3 text-left">
+                                EDIT
+                            </th>
+                            <th class="border border-gray-700 p-3 text-left">
+                                DELETE
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-gray-100">
+                            <td class="border border-gray-700 p-3 text-center">
+                                1
+                            </td>
+                            <td class="border border-gray-700 p-3">subUser</td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="subUser.view"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="subUser.create"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="subUser.edit"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="subUser.delete"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-gray-100">
+                            <td class="border border-gray-700 p-3 text-center">
+                                2
+                            </td>
+                            <td class="border border-gray-700 p-3">roles</td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="roles.view"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="roles.create"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="roles.edit"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                            <td class="border border-gray-700 p-3 text-center">
+                                <label
+                                    class="relative inline-flex items-center cursor-pointer"
+                                    ><input
+                                        type="checkbox"
+                                        name="roles.delete"
+                                        class="sr-only peer" />
+                                    <div
+                                        class="w-12 h-5 bg-gray-300 rounded-full peer-checked:bg-customGray transition-colors"
+                                    ></div>
+                                    <div
+                                        class="absolute left-1 top-0.5 w-4 h-4 bg-white rounded-full transition-transform transform peer-checked:translate-x-6"
+                                    ></div
+                                ></label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                class="flex justify-end space-x-2 mt-4 border-t border-gray-200 pt-4"
+            >
+                <button
+                    type="button"
+                    class="bg-whiteGray text-customGray border border-customGray hover:opacity-90 px-6 py-2"
+                >
+                    Cancel</button
+                ><button
+                    type="submit"
+                    class="bg-customGray text-white hover:opacity-90 px-6 py-2"
+                >
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
