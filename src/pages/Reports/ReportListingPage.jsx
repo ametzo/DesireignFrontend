@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import axiosBase from "../../axios";
 import { PageLoader } from "../../components";
@@ -151,27 +150,27 @@ function ReportListingPage() {
         fetchreports(clearedFilters); // Call handleFilter immediately with cleared values
     };
     return (
-        <div class="bg-mainBg  mt-[65px] py-8">
-            <div class="container mx-auto px-4">
+        <div className="bg-mainBg  mt-[65px] py-8">
+            <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold mb-4">Reports</h2>
+                    <h2 className="text-2xl font-bold mb-4">Reports</h2>
                     <button
                         onClick={downloadPdf}
-                        class="bg-customGray text-white hover:opacity-90 px-4 py-1 text-xs sm:text-base sm:px-6 sm:py-2"
+                        className="bg-customGray text-white hover:opacity-90 px-4 py-1 text-xs sm:text-base sm:px-6 sm:py-2"
                     >
-                        Download Pdf
+                        Download PDF
                     </button>
                 </div>
 
-                <div class=" mb-6">
-                    {/* <h3 class="text-lg font-semibold mb-2">Filter</h3> */}
-                    <hr class="mb-4" />
+                <div className=" mb-6">
+                    {/* <h3 className="text-lg font-semibold mb-2">Filter</h3> */}
+                    <hr className="mb-4" />
                     <div>
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-3">
                             <div>
                                 <label
-                                    for="Customer-search"
-                                    class="font-medium  mb-2 block"
+                                    htmlFor="Customer-search"
+                                    className="font-medium  mb-2 block"
                                 >
                                     Customer
                                 </label>{" "}
@@ -194,8 +193,8 @@ function ReportListingPage() {
                             </div>{" "}
                             <div>
                                 <label
-                                    for="Customer-search"
-                                    class="font-medium  mb-2 block"
+                                    htmlFor="Customer-search"
+                                    className="font-medium  mb-2 block"
                                 >
                                     Service
                                 </label>{" "}
@@ -217,8 +216,8 @@ function ReportListingPage() {
                             </div>{" "}
                             <div>
                                 <label
-                                    for="Customer-search"
-                                    class="font-medium  mb-2 block"
+                                    htmlFor="Customer-search"
+                                    className="font-medium  mb-2 block"
                                 >
                                     From Date
                                 </label>{" "}
@@ -238,8 +237,8 @@ function ReportListingPage() {
                             </div>{" "}
                             <div>
                                 <label
-                                    for="Customer-search"
-                                    class="font-medium  mb-2 block"
+                                    htmlFor="Customer-search"
+                                    className="font-medium  mb-2 block"
                                 >
                                     To Date
                                 </label>{" "}
@@ -259,7 +258,7 @@ function ReportListingPage() {
                             </div>
                             <div className="pt-8">
                                 <button
-                                    class="ml-2 bg-customGray text-white px-6 py-2"
+                                    className="ml-2 bg-customGray text-white px-6 py-2"
                                     onClick={handleFilter}
                                 >
                                     Filter
@@ -278,8 +277,8 @@ function ReportListingPage() {
                 {isLoading ? (
                     <PageLoader />
                 ) : (
-                    <div class=" py-6">
-                        <h3 class="text-lg font-semibold  mb-4">Report List</h3>
+                    <div className=" py-6">
+                        <h3 className="text-lg font-semibold  mb-4">Report List</h3>
                         <ReportTable
                             setReports={setReports}
                             reports={reports}
@@ -309,12 +308,12 @@ function ReportListingPage() {
                             />{" "}
                         </div>
 
-                        <div class="mt-4 flex justify-between items-center">
+                        <div className="mt-4 flex justify-between items-center">
                             <a
                                 href="data:text/csv;charset=utf-8,%EF%BB%BFNo.,Date,Name,Company,Phone,Email,City,Called By,Status%0A1,2024-10-03,sadas,blazon,sdwa,sad@gmail.com,Kerala,roith,Notcontactedyet%0A"
                                 download="Leads.csv"
                             >
-                                <button class="bg-customGray text-white px-4 py-2">
+                                <button className="bg-customGray text-white px-4 py-2">
                                     Download CSV
                                 </button>
                             </a>

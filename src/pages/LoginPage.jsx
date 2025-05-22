@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { TiCancel } from "react-icons/ti";
@@ -54,7 +54,7 @@ export default function LoginPage() {
             <div className=" p-7 w-full max-w-sm">
                
                 <form onSubmit={handleSubmit}>
-                    <div class="mb-6 relative w-full">
+                    <div className="mb-6 relative w-full">
                         {/* <label
                             for="user-id"
                             className="block mb-2 text-muted-foreground"
@@ -64,7 +64,7 @@ export default function LoginPage() {
                         <input
                             type="text"
                             placeholder="Username"
-                            class="w-full h-12 pl-10 pr-3 border border-gray-700 "
+                            className="w-full h-12 pl-10 pr-3 border border-gray-700 "
                             required
                             // autocomplete="off"
                             name="userId"
@@ -73,10 +73,10 @@ export default function LoginPage() {
                         <SlUser className="absolute left-3 top-1/2 transform -translate-y-1/2 text-customGray text-xl" />{" "}
                     </div>
 
-                    <div class="mb-6 relative w-full">
+                    <div className="mb-6 relative w-full">
                         {/* <label
                             for="password"
-                            class="block mb-2 text-muted-foreground"
+                            className="block mb-2 text-muted-foreground"
                         >
                             Password
                         </label> */}
@@ -84,9 +84,9 @@ export default function LoginPage() {
                             type={showPassword ? "text" : "password"}
                             // id="password"
                             placeholder="Password"
-                            class="w-full h-12 pl-10 pr-3 border border-gray-700"
+                            className="w-full h-12 pl-10 pr-3 border border-gray-700"
                             required
-                            autocomplete="off"
+                            autoComplete="off"
                             name="password"
                             onChange={handleChange}
                         />
@@ -108,7 +108,7 @@ export default function LoginPage() {
                         ) : (
                             <button
                                 type="submit"
-                                class="  text-white hover:opacity-90 p-1 w-full  transition duration-200 ease-in-out mx-auto block"
+                                className="  text-white hover:opacity-90 p-1 w-full  transition duration-200 ease-in-out mx-auto block"
                             >
                                 LOGIN
                             </button>
